@@ -10,10 +10,12 @@ require("local-time").start()
 
 window.Rails = Rails
 
+import "@hotwired/turbo-rails"
+
 import 'bootstrap'
 import 'data-confirm-modal'
 
-$(document).on("turbolinks:load", () => {
+$(document).on("turbo:load", () => {
   $('[data-toggle="tooltip"]').tooltip()
   $('[data-toggle="popover"]').popover()
 })
