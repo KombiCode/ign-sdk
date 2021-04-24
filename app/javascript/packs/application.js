@@ -15,9 +15,15 @@ import "@hotwired/turbo-rails"
 import 'bootstrap'
 import 'data-confirm-modal'
 
+import 'ol/ol.css';
+
+// internal imports
+import { initGeoportal } from '../plugins/init_ign_geoportal.js'
+
 $(document).on("turbo:load", () => {
-  $('[data-toggle="tooltip"]').tooltip()
-  $('[data-toggle="popover"]').popover()
+  $('[data-toggle="tooltip"]').tooltip();
+  $('[data-toggle="popover"]').popover();
+  initGeoportal();
 })
 
 import "controllers"
